@@ -1,0 +1,106 @@
+  <!DOCTYPE html>
+  <html>
+  <head>
+  <title>Design Avenue</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!--Bootstrap CDN link-->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <!-- Cutsom Css -->
+  <link rel="stylesheet" href="Misc/style.css">
+  </head>
+  <body>
+
+<!-- Script for password matching and verification -->
+    <script>
+      function myfun(){
+        var a= document.getElementById("password1").value;
+          var b= document.getElementById("password2").value;
+        if(a==""){
+          document.getElementById("message").innerHTML="** Please Fill Password **";
+          return false;
+        }
+        if(a.length<5){
+          document.getElementById("message").innerHTML="** Password length must be greater then 5 characters **";
+          return false;
+        }
+        if(a!=b){
+          document.getElementById("message").innerHTML="** Password didn't match **";
+          return false;
+        }
+      }
+    </script>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-md-7">
+          <h1 class="text-left">Investment Newsletter</h1>
+          <p class="text-left text-left-para">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+        </div>
+        <div class="col-md-5 form-box">
+          <div class="row">
+            <div class="col-md-6">
+              <h3 class="text-left">Registration form</h3>
+            </div>
+            <div class="col-md-6">
+              <span class="glyphicon glyphicon-pencil"></span>
+            </div>
+          </div>
+            <hr>
+            <!-- Close -->
+            <form class="form-signin" onsubmit="return myfun()" method="POST" action="/">
+            <div class="row row-detail">
+              <label class="label col-md-2">E-mail</label>
+                <div class="col-md-10">
+                  <input type="Email" class="form-control" name="email" placeholder="Email" autocomplete="off" />
+                </div>
+          </div>
+          <div class="row row-detail">
+            <label class="label col-md-2">Password</label>
+              <div class="col-md-10">
+                <input type="password" class="form-control" name="password" id="password1" placeholder="Password" />
+                <span id="message" style="color:red";></span>
+              </div>
+        </div>
+        <div class="row row-detail">
+          <label class="label col-md-2"><span class="word">Confirm Password</span></label>
+            <div class="col-md-10">
+              <input type="password" class="form-control" name="confirmpassword" id="password2" placeholder="Confirm Password" />
+              <span id="messages" style="color:red;"></span>
+            </div>
+      </div>
+      <div class="row row-detail">
+        <label class="label col-md-2">Country</label>
+          <div class="col-md-10">
+            <select class="form-control" name="country">
+              <option>India</option>
+              <option>Pakistan</option>
+              <option>USA</option>
+              <option>Canada</option>
+              <option>UAE</option>
+            </select>
+          </div>
+    </div>
+
+    <div class="row row-detail">
+      <label class="label col-md-2">States</label>
+        <div class="col-md-10">
+          <select class="form-control" name="states">
+            <option>Jammu</option>
+            <option>Punjab</option>
+            <option>Himachal</option>
+            <option>Delhi</option>
+            <option>Goa</option>
+          </select>
+        </div>
+  </div>
+            <!-- Close -->
+      <button class="btn btn-info" type="submit">Register</button>
+        <div class="btn-info1">
+        <a href="#">Already have an account?</a></div>
+      </form>
+        </div>
+      </div>
+    </div>
+
+  </body>
+  </html>
